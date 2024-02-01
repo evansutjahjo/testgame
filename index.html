@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Rock, Paper, Scissors & Wildcard</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+    <div id="rules" >
+      <h2>Game Rules</h2>
+      <p>The game consists of 10 rounds, each player will start with 10 cards on hand consisting of:
+        <br>• 3 x Stone cards
+        <br>• 3 x Scissors cards
+        <br>• 3 x Paper cards
+        <br>• 1 x Wildcard
+        </p>
+      <p>In each round, players will choose to play one card from their hand.</p>
+      <p>Traditional rock, paper, scissors logic applies to determine the win-loss-tie per round</p>
+      <p>Player will be awarded 3 points for every win, 1 point for every tie, and -1 point for every loss</p>
+      <p>If there are only one Wildcard played in the round, the player that plays the Wildcard will be awarded a one-off 10 points</p>
+      <p>If there are more than one Wildcard played in the round, the Wildcard is worth 0 points</p>
+      <p>Player with the highest cumulative point after 10 rounds will be the winner</p>
+
+      <button id = startbutton type = "button" onclick="newGame()">Start Game</button>
+    </div>
+    
+    <div id="gameUI">
+      <h2>Make your choice</h2>
+      <div class="buttons">
+        <button id="rock">Rock ✊ <br><span id="remainingRock">3</span></button>
+        <button id="paper">Paper 🤚 <br><span id="remainingPaper">3</span></button>
+        <button id="scissors">Scissors 🖖 <br><span id="remainingScissors">3</span></button>
+        <button id="wildcard">Wildcard 🖕 <br><span id="remainingWildcard">1</span></button>
+      </div>
+    </div>
+    
+    <div id="computerSummary">
+      <h2> Computer Choice this Round</h2>
+      <div id="roundLogic">
+      </div>
+    </div>
+
+    <div id="scoreBoard">
+      <h2 id="scoreHeader">Leaderboard</h2>
+      <div id="PointsContainer"></div>
+    </div>
+      
+    <div id = "gameOverScreen">
+      <h2 id="endGame">Game Over</h2>
+      <div id="endingText"></div>
+      <button id = startbutton type = "button" onclick="newGame()">New Game</button>
+    </div>
+
+    <script src="game.js" defer></script>
+  </body>
+</html>

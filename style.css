@@ -1,0 +1,82 @@
+#gameUI, #resultGrp, #scoreBoard, #gameOverScreen, #computerSummary {
+  display: none;
+  text-align: center;
+  margin: auto;
+}
+
+#roundLogic {
+  width: 80%;
+  margin: auto;
+  display: none;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 4rem;
+}
+
+@media (max-width: 768px) {
+  #roundLogic {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #roundLogic {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.logicGridItem{
+  padding: 20px;
+  box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  border-radius: 20px;
+}
+
+#startbutton {
+  background-color: brown;
+  color: antiquewhite; 
+  height: 45px;
+  width: 100px;
+}
+
+#rules {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+button{
+  border-radius: 20px;
+  color: black;
+  margin: 10px;
+  }
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.buttons button {
+  padding: 20px;
+  font-size: 16px;
+  position: relative;
+}
+
+.buttons button span {
+  justify-content: center;
+  padding: 10px;
+  margin:10px;
+ }
+
+ @media (max-width: 768px) {
+  .buttons {
+    flex-wrap: wrap;
+  }
+
+  .buttons button {
+    width: 45%; 
+    margin: 5px;
+  }
+}
